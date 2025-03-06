@@ -1,9 +1,11 @@
 package com.freelanceror.mytemp.data
 
 import com.freelanceror.mytemp.data.remote.RemoteDataSource
+import com.freelanceror.mytemp.data.remote.response.WeatherDataResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import javax.inject.Inject
 
 class KtorRemoteDataSource @Inject constructor(
     private val httpClient: HttpClient
