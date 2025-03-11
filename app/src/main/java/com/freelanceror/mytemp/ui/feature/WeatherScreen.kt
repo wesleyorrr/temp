@@ -21,11 +21,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+
 import com.freelanceror.mytemp.data.model.WeatherInfo
 import com.freelanceror.mytemp.ui.theme.MyTempTheme
+import com.freelanceror.mytemp.ui.theme.BlueSky
 
 @Composable
 fun WeatherRoute(
+
     viewModel: WeatherViewModel = viewModel(),
 ) {
     val weatherInfState by viewModel.weatherInfoState.collectAsStateWithLifecycle()
@@ -43,7 +46,7 @@ fun WeatherScreen(
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = if (weatherInfo.isDay) {
-                Bluesky
+                BlueSky
             } else Color.DarkGray
         ) {
             Column(
@@ -103,7 +106,7 @@ fun WeatherScreen(
 @Composable
 fun WeatherScreenPreview() {
 
-    MyTempTheme  {
+    MyTempTheme {
         WeatherScreen(
             weatherInfo = WeatherInfo(
                 locationName = "Belo Horizonte",

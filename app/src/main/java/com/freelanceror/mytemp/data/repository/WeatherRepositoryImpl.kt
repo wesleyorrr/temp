@@ -7,6 +7,7 @@ import com.freelanceror.mytemp.data.remote.RemoteDataSource
 import java.time.LocalDate
 import java.time.format.TextStyle.FULL
 import java.util.Locale
+import kotlin.math.roundToInt
 import javax.inject.Inject
 
 class WeatherRepositoryImpl @Inject constructor(
